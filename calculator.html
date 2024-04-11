@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Addition Calculator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        text-align: center;
+    }
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    #result {
+        font-size: 24px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <input type="number" id="input1" placeholder="Input 1">
+    <input type="number" id="input2" placeholder="Input 2">
+    <div id="result">0</div>
+</div>
+
+<script>
+    // Get input fields and result element
+    const input1 = document.getElementById('input1');
+    const input2 = document.getElementById('input2');
+    const result = document.getElementById('result');
+
+    // Function to update result
+    function updateResult() {
+        const value1 = parseFloat(input1.value) || 0; // Parse float or default to 0 if NaN
+        const value2 = parseFloat(input2.value) || 0; // Parse float or default to 0 if NaN
+        const sum = value1 + value2;
+        result.textContent = sum;
+    }
+
+    // Add event listeners to input fields
+    input1.addEventListener('input', updateResult);
+    input2.addEventListener('input', updateResult);
+</script>
+</body>
+</html>
