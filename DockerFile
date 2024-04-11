@@ -4,3 +4,10 @@ FROM postgres:latest
 ENV POSTGRES_DB=2024_gxp_test_db
 ENV POSTGRES_USER=test_user
 ENV POSTGRES_PASSWORD=test_password
+
+# CREATE TABLE calculations (
+#     id SERIAL PRIMARY KEY,
+#     input1 FLOAT,
+#     input2 FLOAT,
+#     result FLOAT
+# );
